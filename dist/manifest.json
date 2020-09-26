@@ -1,0 +1,10 @@
+{
+  "short_name": "Op",
+  "name": "Optalk",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "One stop extension for your next interviews",
+  "browser_action": {
+    "default_popup": "index.html"
+  }
+}
