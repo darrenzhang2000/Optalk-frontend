@@ -14,17 +14,17 @@ const Account = props => {
             <p>Linked Accounts</p>
         </div>
      
-        <Paper className="row1">
+        <Paper elevation={3} className="row1 rounded">
             <img src={Skype} className="img" />
             <p>Skype</p>
         </Paper>
 
-        <Paper className="row1">
+        <Paper elevation={3} className="row1">
             <img src={MST} className="img" />
             <p>Microsoft Teams</p>
         </Paper>
 
-        <Paper className="row1">
+        <Paper elevation={3} className="row1">
             <img src={GoogleMeet} className="img" />
             <p>Google Meet</p>
         </Paper>

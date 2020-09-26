@@ -13,6 +13,8 @@
 .row1{
     width: 300px; 
     margin-bottom: 15px;
+    align-content: center;
+    text-align: center;
 }
 .row1 img{
     vertical-align: middle;
