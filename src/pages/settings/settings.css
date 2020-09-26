@@ -1,4 +1,16 @@
 .row {
     display: flex;
     flex-direction: row;
+    width: 200px; 
+    margin-bottom: 15px;
+    justify-content: center;
+    text-align: center;
+}
+.checled{
+    background-color: orange;
+
+}
+.heading p{
+    width: 200px;
+    text-align: center;
 }

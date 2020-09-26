@@ -1,29 +1,31 @@
 import { Paper } from '@material-ui/core'
 import React from 'react'
+import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked'
+import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked'
 import HumanAvatar from './images/human.png'
 import RobotAvatar from './images/robot.png'
 import "./settings.css"
 
 const Settings = props => {
-    return <div>
+    return <div class="heading">
         <p>Voice preference</p>
         
-        <Paper className="row">
-            <div>TEMP CIRCLE</div>
+        <Paper className="row checked">
+            <RadioButtonCheckedIcon/>
             <p>Robot</p>
         </Paper>
 
         <Paper className="row">
-            <div>TEMP CIRCLE</div>
+        <RadioButtonUncheckedIcon/>
             <p>Mary</p>
         </Paper>
 
         <Paper className="row">
-            <div>TEMP CIRCLE</div>
+        <RadioButtonUncheckedIcon/>
             <p>Tom</p>
         </Paper>
 
-        <p>Voice preference</p>
+        <p>Video preference</p>
         <div className="row">
             <img src={HumanAvatar}/>
             <img src={RobotAvatar}/>
