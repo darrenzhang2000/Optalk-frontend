@@ -9,6 +9,7 @@ import Footer from './component/bottom/bottom.component'
 import Signup from './component/signup/signup';
 import Home from './pages/home/home'
 import Sidedrawer from './component/sidedrawer/sidedrawer';
+import Account from './pages/account/account';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route exact path='/signup' component={Signup}/>
       <Route exact path="/home" component={Home}/>
       <Route exact path="/sidedrawer" component={Sidedrawer}/>
+      <Route exact path='/account' component={Account}/>
       {/* <Footer /> */}
     </div>
     </Provider>
