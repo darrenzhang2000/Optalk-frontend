@@ -1,5 +1,5 @@
 import { Switch, FormControlLabel, withStyles } from '@material-ui/core'
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import "./home.css"
 import Skype from "./images/skype.png"
 import GoogleMeet from "./images/google-meet.png"
@@ -65,40 +65,49 @@ const Home = props => {
     const [voiceChangeSelected, setVoiceChangeSelected] = useState(false)
     const [videoChangeSelected, setVideoChangeSelected] = useState(false)
 
+    const [voiceCheck, setVoiceCheck] = useState(false);
+    const [videoCheck, setVideoCheck] = useState(false);
+
     const onSubmit = () => {
 
     }
 
+
     return <div className="col root">
         <p className="text">Active</p>
 
-        <div className="platforms">
-            <img src={Skype} />
-            <img src={MST} />
-            <img src={GoogleMeet} />
-        </div>
 
-        <div className="voice-change row">
-            <FormControlLabel
-                control={<IOSSwitch checked={voiceChangeSelected} onChange={()=>{setVoiceChangeSelected(!voiceChangeSelected)}} name="checkedB" />}
+    return <div className="home">
+            <p className="activeTitle">Active</p>
+
+            <div className="platforms">
+                <img src={Skype} className="img" />
+                <img src={MST} className="img" />
+                <img src={GoogleMeet} className="img" />
+            </div>
+
+            <div className="voice-change row">
+                <FormControlLabel
+                    control={<IOSSwitch checked={voiceChangeSelected} onChange={() => { setVoiceChangeSelected(!voiceChangeSelected) }} name="checkedB" />}
                 // label="iOS style"
-            />
-            <p className="text">Voice Change</p>
-        </div>
+                />
+                <p className="text">Voice Change</p>
+            </div>
 
-        <div className="video-change row">
-            <FormControlLabel
-                control={<IOSSwitch checked={videoChangeSelected} onChange={()=>{setVideoChangeSelected(!videoChangeSelected)}} name="checkedB" />}
+            <div className="video-change row">
+                <FormControlLabel
+                    control={<IOSSwitch checked={videoChangeSelected} onChange={() => { setVideoChangeSelected(!videoChangeSelected) }} name="checkedB" />}
                 // label="iOS style"
-            />
-            <p className="text">Video Change</p>
-        </div>
+                />
+                <p className="text">Video Change</p>
+            </div>
 
-        <button style={{width: '100px'}}> Show more options</button>
-        <div >
-            <button className="button" onClick={onSubmit}>
-                Apply
-                </button>
+            <button style={{ width: '100px' }}> Show more options</button>
+            <div >
+                <button className="button" onClick={onSubmit}>
+                    Apply
+            </button>
+            </div>
         </div>
     </div>
 }

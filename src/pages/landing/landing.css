@@ -2,6 +2,13 @@
     display: flex;
     flex-direction: row;
 }
+.auth{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:10%;
+}
 
 .on-focus {
     background-color: #FF6B00;

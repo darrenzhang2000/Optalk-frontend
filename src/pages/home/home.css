@@ -4,13 +4,28 @@
 
 }
 
-.col{
+.home{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.root{
+.activeTitle{
+    font-weight: 700;
+    font-size: larger;
+}
+
+.img{
+    margin:5px;
+}
+
+.voiceChange{
+    display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    margin:2px;
 }
 
 .text{
@@ -27,7 +42,7 @@
 }
 
 .button {
-    margin-top: 10px;
+    margin-top: 15px;
     width: 211px;
     height: 45px;
 
@@ -40,4 +55,13 @@
     width: 180px;
     display: flex;
     justify-content: space-between;
+    outline: none;
+}
+
+.options{
+    border:none;
+    color:#FF6B00;
+    background-color: white;
+    outline: none;
+
 }

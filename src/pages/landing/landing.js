@@ -10,7 +10,7 @@ const Landing = props => {
     const [onLogin, setOnLogin] = useState(true) 
     
 
-    return <div>
+    return <div className="auth">
         <img src={Logo}/>
         <div className="login-signup">
             <button className={onLogin ? "on-focus" : "off-focus"} onClick={()=>setOnLogin(true)}><p className="word">Login</p></button>
