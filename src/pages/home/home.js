@@ -77,7 +77,7 @@ const Home = props => {
         <p className="text">Active</p>
 
 
-    return <div className="home">
+        <div className="home">
             <p className="activeTitle">Active</p>
 
             <div className="platforms">
