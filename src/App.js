@@ -8,7 +8,7 @@ import store from './redux/redux';
 import Header from './component/header/header.component'
 import Footer from './component/bottom/bottom.component'
 import Signup from './component/signup/signup';
-
+import Home from './pages/home/home'
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
       <Route exact path='/' component={Landing} />
       <Route exact path='/register' component={Register} />
       <Route exact path='/signup' component={Signup}/>
+      <Route exact path="/home" component={Home}/>
       {/* <Footer /> */}
     </div>
     </Provider>
