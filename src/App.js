@@ -10,7 +10,7 @@ import Signup from './component/signup/signup';
 import Home from './pages/home/home'
 import Sidedrawer from './component/sidedrawer/sidedrawer';
 import Account from './pages/account/account';
-
+import Settings from './pages/settings/settings'
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
       <Route exact path="/home" component={Home}/>
       <Route exact path="/sidedrawer" component={Sidedrawer}/>
       <Route exact path='/account' component={Account}/>
+      <Route exact path='/settings' component={Settings}/>
       {/* <Footer /> */}
     </div>
     </Provider>
