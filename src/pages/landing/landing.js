@@ -8,12 +8,13 @@ import "./landing.css"
 const Landing = props => {
     // login or sign up page
     const [onLogin, setOnLogin] = useState(true) 
+    
 
     return <div>
         <img src={Logo}/>
         <div className="login-signup">
-            <Button onClick={()=>setOnLogin(true)}>Login</Button>
-            <Button onClick={()=>setOnLogin(false)}>Sign Up</Button>
+            <button className={onLogin ? "on-focus" : "off-focus"} onClick={()=>setOnLogin(true)}><p className="word">Login</p></button>
+            <button className={!onLogin ? "on-focus" : "off-focus"} onClick={()=>setOnLogin(false)}>Sign Up</button>
         </div>
         {onLogin ? <SignIn/> : <Signup/>}
     </div>

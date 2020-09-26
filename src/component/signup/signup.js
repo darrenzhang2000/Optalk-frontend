@@ -11,33 +11,44 @@ const InputField = withStyles({
             color: 'tomato'
         },
         '& label': {
-            color: 'tan'
+            color: '#FF6B00'
         },
         '& .MuiOutlinedInput-root': {
             '& fieldset': {
-                borderColor: 'tan'
+                borderColor: '#FF6B00'
             },
             '&:hover fieldset': {
-                borderColor: 'tan'
+                borderColor: '#FF6B00'
             },
             '& .Mui-focused fieldset': {
-                borderColor: 'tan'
+                borderColor: '#FF6B00'
             }
-        }
+        },
+        width: 310
     }
 })(TextField);
 
-const useStyles = makeStyles((theme) => ({ 
+const useStyles = makeStyles((theme) => ({
     form: {
         display: 'column'
     },
     button: {
-        marginTop: '10px'
+        marginTop: '10px',
+        width: '211px',
+        height: '45px',
+
+        background: '#FF6B00',
+        borderRadius: '25px',
+        marginLeft: '54px'
     },
     newaccount: {
         marginTop: '10px'
+    },
+    form: {
+        display: 'flex',
+        flexDirection: 'column'
     }
-  }));
+}));
 
 
 const Signup = props => {
@@ -69,10 +80,9 @@ const Signup = props => {
     }
 
     return <div>
-        <form>
+        <form className={classes.form}>
             <InputField
-                // className={classes.input}
-                fullWidth={true}
+                className={classes.input}
                 label='Email'
                 name='email'
                 required
@@ -85,8 +95,7 @@ const Signup = props => {
                 value={email}
             />
             <InputField
-                // className={classes.input}
-                fullWidth={true}
+                className={classes.input}
                 label='Password'
                 name='password'
                 required
@@ -99,8 +108,7 @@ const Signup = props => {
                 value={password}
             />
             <InputField
-                // className={classes.input}
-                fullWidth={true}
+                className={classes.input}
                 label='Confirm Password'
                 name='confirmPassword'
                 required
@@ -113,10 +121,11 @@ const Signup = props => {
                 value={confirmPassword}
             />
             <div >
-                {/* <div className={classes.button}> */}
-                <Button variant="contained" color="primary" onClick={onSubmit}>
-                    Submit
-                </Button>
+                <div >
+                    <button className={classes.button} onClick={onSubmit}>
+                        Submit
+                </button>
+                </div>
             </div>
         </form>
     </div>

@@ -11,33 +11,46 @@ const InputField = withStyles({
             color: 'tomato'
         },
         '& label': {
-            color: 'tan'
+            color: '#FF6B00'
         },
         '& .MuiOutlinedInput-root': {
             '& fieldset': {
-                borderColor: 'tan'
+                borderColor: '#FF6B00'
             },
             '&:hover fieldset': {
-                borderColor: 'tan'
+                borderColor: '#FF6B00'
             },
             '& .Mui-focused fieldset': {
-                borderColor: 'tan'
+                borderColor: '#FF6B00'
             }
-        }
-    }
+        },
+        width: 310
+    },
+
 })(TextField);
 
-const useStyles = makeStyles((theme) => ({ 
+const useStyles = makeStyles((theme) => ({
     form: {
-        display: 'column'
+        display: 'flex',
+        flexDirection: 'column'
     },
     button: {
-        marginTop: '10px'
+        marginTop: '10px',
+        color: '#FF6B00'
     },
     newaccount: {
         marginTop: '10px'
-    }
-  }));
+    },
+    button: {
+        marginTop: '10px',
+        width: '211px',
+        height: '45px',
+
+        background: '#FF6B00',
+        borderRadius: '25px',
+        marginLeft: '54px'
+    },
+}));
 
 
 const SignIn = props => {
@@ -69,10 +82,10 @@ const SignIn = props => {
     }
 
     return <div>
-        <form>
+        <form className={classes.form}>
             <InputField
                 // className={classes.input}
-                fullWidth={true}
+                // fullWidth={true}
                 label='Email'
                 name='email'
                 required
@@ -86,7 +99,7 @@ const SignIn = props => {
             />
             <InputField
                 // className={classes.input}
-                fullWidth={true}
+                // fullWidth={true}
                 label='Password'
                 name='password'
                 required
@@ -99,11 +112,12 @@ const SignIn = props => {
                 value={password}
             />
 
-            <div >
-                {/* <div className={classes.button}> */}
-                <Button variant="contained" color="primary" onClick={onSubmit}>
-                    Submit
-                </Button>
+<div >
+                <div >
+                    <button className={classes.button} onClick={onSubmit}>
+                        Submit
+                </button>
+                </div>
             </div>
         </form>
     </div>

@@ -1,5 +1,33 @@
 .login-signup {
     display: flex;
     flex-direction: row;
+}
+
+.on-focus {
+    background-color: #FF6B00;
+    width: 155px;
+    height: 52px;
+
+}
+
+.off-focus {
+    background-color: #FF6B0080;
+    width: 155px;
+    height: 52px;
+}
+
+.word {
+    /* position: relative;
+    width: 88px;
+    height: 29px;
+    left: calc(50% - 88px/2 + 75.5px);
+    top: 245px;
     
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    
+    color: #000000; */
 }
