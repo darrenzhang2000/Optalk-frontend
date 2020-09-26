@@ -99,7 +99,7 @@ const Home = props => {
                 <p className="text">Video Change</p>
             </div>
 
-            <button style={{ width: '100px' }}> Show more options</button>
+            <button className="options">Show more options</button>
             <div >
                 <button className="button" onClick={onSubmit}>
                     Apply
