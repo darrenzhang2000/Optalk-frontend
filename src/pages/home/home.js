@@ -74,9 +74,6 @@ const Home = props => {
 
 
     return <div className="col root">
-        <p className="text">Active</p>
-
-
         <div className="home">
             <p className="activeTitle">Active</p>
 
