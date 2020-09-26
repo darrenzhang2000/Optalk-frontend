@@ -8,6 +8,7 @@ import Header from './component/header/header.component'
 import Footer from './component/bottom/bottom.component'
 import Signup from './component/signup/signup';
 import Home from './pages/home/home'
+import Sidedrawer from './component/sidedrawer/sidedrawer';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Route exact path='/' component={Landing} />
       <Route exact path='/signup' component={Signup}/>
       <Route exact path="/home" component={Home}/>
+      <Route exact path="/sidedrawer" component={Sidedrawer}/>
       {/* <Footer /> */}
     </div>
     </Provider>
