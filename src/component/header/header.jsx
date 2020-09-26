@@ -7,6 +7,11 @@ import Button from '@material-ui/core/Button';
 import {Link} from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton';
 import logo from './images/logoiprofile.png';
+import MenuIcon from '@material-ui/icons/Menu';
+import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
+import SettingsIcon from '@material-ui/icons/Settings';
+import "./header.css"
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,14 +34,22 @@ export default function Header() {
     <div className={classes.root}>
       <AppBar position="static" color="transparent">
         <Toolbar className={classes.header}>
-            <Link to='/'>
+
+            <Link to='/home'>
                 <IconButton>
-                    <Avatar alt="Iprofile" src={logo} className={classes.large}/>
+                  <MenuIcon/>                    
                 </IconButton>
             </Link>
-            <Link to='/home'>
+            
+            <Link to='/notifications'>
                 <Button variant="contained" color="primary">
-                    Home
+                    <NotificationsNoneIcon/>
+                </Button>
+            </Link>
+
+            <Link to='/settings'>
+                <Button variant="contained" color="primary">
+                    <SettingsIcon/>
                 </Button>
             </Link>
 
