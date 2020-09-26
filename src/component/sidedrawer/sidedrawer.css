@@ -1,3 +1,17 @@
-row {
-    
-}
+
+   
+  .side-drawer div{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    list-style: none
+
+  }
+
+  .side-drawer p{
+    margin-left: 10px;
+  }
+  div.cancel{
+    width: 80px;
+    justify-content: center;
+  }

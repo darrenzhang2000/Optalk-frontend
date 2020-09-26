@@ -7,29 +7,28 @@ import CancelIcon from '@material-ui/icons/Cancel';
 import "./sidedrawer.css"
 
 const Sidedrawer = props => {
-    return <div>
-        <div className="row">
-            <AccountCircle/>
-            <p>Account</p>
-        </div>
+  return (
+    <nav className="side-drawer" style={{justifyItems:'center'}}>
+      <div>
+        <AccountCircle style={{ color: '#FF6B00' }} /><p>Account</p>
+      </div>
+      <div>
+        <PeopleAltIcon style={{ color: '#FF6B00' }} /><p>Switch Account</p>
+      </div>
 
-        <div className="row">
-            <PeopleAltIcon/>
-            <p>Switch Account</p>
-        </div>
+      <div>
+        <HelpOutlineIcon style={{ color: '#FF6B00' }} /><p>Help</p>
+      </div>
+      <div>
+        <ExitToAppIcon style={{ color: '#FF6B00', transform: "scaleX(-1)" }} /><p>Logout</p>
+      </div>
+      <br></br>
+      <div class="cancel"><CancelIcon style={{ color: '#FF6B00' }} />
+      </div>
 
-        <div className="row">
-            <HelpOutlineIcon/>
-            <p>Help</p>
-        </div>
 
-        <div className="row">
-            <ExitToAppIcon/>
-            <p>Logout</p>
-        </div>
-
-        <CancelIcon/>
-    </div>
+    </nav>
+  )
 }
 
 export default Sidedrawer 
