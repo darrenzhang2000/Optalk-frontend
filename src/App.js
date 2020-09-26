@@ -11,6 +11,7 @@ import Home from './pages/home/home'
 import Sidedrawer from './component/sidedrawer/sidedrawer';
 import Account from './pages/account/account';
 import Settings from './pages/settings/settings'
+import Notifications from './pages/notifications/notifications';
 function App() {
   return (
     <Provider store={store}>
@@ -23,6 +24,7 @@ function App() {
       <Route exact path="/sidedrawer" component={Sidedrawer}/>
       <Route exact path='/account' component={Account}/>
       <Route exact path='/settings' component={Settings}/>
+      <Route exact path="/notifications" component={Notifications}/>
       {/* <Footer /> */}
     </div>
     </Provider>
