@@ -1,18 +1,76 @@
-import { Switch } from '@material-ui/core'
-import React from 'react'
+import { Switch, FormControlLabel, withStyles } from '@material-ui/core'
+import React, {useState} from 'react'
 import "./home.css"
 import Skype from "./images/skype.png"
 import GoogleMeet from "./images/google-meet.png"
 import MST from "./images/microsoft-teams.png"
 
+const IOSSwitch = withStyles((theme) => ({
+    root: {
+        width: 100,
+        height: 50,
+        padding: 0,
+        margin: theme.spacing(1),
+    },
+    switchBase: {
+        padding: 1,
+        '&$checked': {
+            transform: 'translateX(52px)',
+            color: theme.palette.common.white,
+            '& + $track': {
+                backgroundColor: '#52d869',
+                opacity: 1,
+                border: 'none',
+            },
+        },
+        '&$focusVisible $thumb': {
+            color: '#52d869',
+            border: '6px solid #fff',
+        },
+    },
+    thumb: {
+        width: 48,
+        height: 48,
+    },
+    track: {
+        borderRadius: 48 / 2,
+        border: `1px solid ${theme.palette.grey[400]}`,
+        backgroundColor: theme.palette.grey[50],
+        opacity: 1,
+        transition: theme.transitions.create(['background-color', 'border']),
+    },
+    checked: {},
+    focusVisible: {},
+}))(({ classes, ...props }) => {
+
+
+
+    return (
+        <Switch
+            focusVisibleClassName={classes.focusVisible}
+            disableRipple
+            classes={{
+                root: classes.root,
+                switchBase: classes.switchBase,
+                thumb: classes.thumb,
+                track: classes.track,
+                checked: classes.checked,
+            }}
+            {...props}
+        />
+    );
+});
+
 const Home = props => {
+    const [voiceChangeSelected, setVoiceChangeSelected] = useState(false)
+    const [videoChangeSelected, setVideoChangeSelected] = useState(false)
 
     const onSubmit = () => {
-    
+
     }
 
     return <div className="col root">
-        <p>Active</p>
+        <p className="text">Active</p>
 
         <div className="platforms">
             <img src={Skype} />
@@ -21,16 +79,22 @@ const Home = props => {
         </div>
 
         <div className="voice-change row">
-            <Switch size="large" />
+            <FormControlLabel
+                control={<IOSSwitch checked={voiceChangeSelected} onChange={()=>{setVoiceChangeSelected(!voiceChangeSelected)}} name="checkedB" />}
+                // label="iOS style"
+            />
             <p className="text">Voice Change</p>
         </div>
 
         <div className="video-change row">
-            <Switch />
+            <FormControlLabel
+                control={<IOSSwitch checked={videoChangeSelected} onChange={()=>{setVideoChangeSelected(!videoChangeSelected)}} name="checkedB" />}
+                // label="iOS style"
+            />
             <p className="text">Video Change</p>
         </div>
 
-        <button>Show more options</button>
+        <button style={{width: '100px'}}> Show more options</button>
         <div >
             <button className="button" onClick={onSubmit}>
                 Apply

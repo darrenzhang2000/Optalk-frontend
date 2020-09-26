@@ -1,6 +1,7 @@
 .row{
     display: flex;
     flex-direction: row;
+
 }
 
 .col{
@@ -33,4 +34,10 @@
     background: #FF6B00;
     border-radius: 25px;
     margin-left: 54px;
+}
+
+.platform {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
 }
