@@ -32,27 +32,27 @@ export default function Header() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="transparent">
+      <AppBar position="static" style={{ background:  '#FF6B00' }}>
         <Toolbar className={classes.header}>
 
             <Link to='/home'>
                 <IconButton>
-                  <MenuIcon/>                    
+                  <MenuIcon style={{ color: 'white' }}/>                    
                 </IconButton>
             </Link>
-            
+            <div style={{display: 'flex', justifyContent: 'right'}}>
             <Link to='/notifications'>
-                <Button variant="contained" color="primary">
-                    <NotificationsNoneIcon/>
+                <Button >
+                    <NotificationsNoneIcon style={{ color: 'white'}}/>
                 </Button>
             </Link>
 
             <Link to='/settings'>
-                <Button variant="contained" color="primary">
-                    <SettingsIcon/>
+                <Button>
+                    <SettingsIcon style={{ color: 'white' }}/>
                 </Button>
             </Link>
-
+            </div>
         </Toolbar>
       </AppBar>
     </div>

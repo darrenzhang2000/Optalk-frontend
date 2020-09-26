@@ -11,7 +11,6 @@ import Home from './pages/home/home'
 import Sidedrawer from './component/sidedrawer/sidedrawer';
 import Account from './pages/account/account';
 import Settings from './pages/settings/settings'
-
 function App() {
   return (
     <Provider store={store}>
