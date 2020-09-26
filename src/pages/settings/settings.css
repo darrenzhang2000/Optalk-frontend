@@ -1,9 +1,4 @@
 .row {
     display: flex;
     flex-direction: row;
-    margin: 30px 0;
-}
-
-.root {
-    margin: 30px;
 }
