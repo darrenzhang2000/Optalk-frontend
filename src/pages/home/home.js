@@ -74,7 +74,9 @@ const Home = props => {
         setCurText("Listening...")
 
         spoken.listen({ continuous : true }).then( transcript =>
-            setCurText(transcript)
+            {
+                spoken.say(transcript)
+                setCurText(transcript)}
         ).catch( e => true );
 
     }
