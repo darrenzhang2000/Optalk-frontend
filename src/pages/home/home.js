@@ -1,9 +1,10 @@
 import { Switch, FormControlLabel, withStyles } from '@material-ui/core'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./home.css"
 import Skype from "./images/skype.png"
 import GoogleMeet from "./images/google-meet.png"
 import MST from "./images/microsoft-teams.png"
+import spoken from '../../../node_modules/spoken/build/spoken.js';
 
 const IOSSwitch = withStyles((theme) => ({
     root: {
@@ -65,12 +66,56 @@ const Home = props => {
     const [voiceChangeSelected, setVoiceChangeSelected] = useState(false)
     const [videoChangeSelected, setVideoChangeSelected] = useState(false)
 
-    const [voiceCheck, setVoiceCheck] = useState(false);
-    const [videoCheck, setVideoCheck] = useState(false);
+    const [curText , setCurText] = useState('Listening...')
 
-    const onSubmit = () => {
+
+    const startCapture = () => {
+        spoken.say("Listening.....")
+        setCurText("Listening...")
+
+        spoken.listen({ continuous : true }).then( transcript =>
+            setCurText(transcript)
+        ).catch( e => true );
 
     }
+
+    const continueCapture = async () => {
+        await spoken.delay(300);
+        if(spoken.recognition.continuous)
+            startCapture();
+    }
+
+    const stopCapture = () => {
+        spoken.recognition.continuous = false;
+        spoken.listen.stop();
+        setCurText("");
+    }
+
+    const onSubmit = () => {
+        spoken.listen.on.end(continueCapture);
+        spoken.listen.on.error(continueCapture);
+
+        if(voiceChangeSelected){
+            startCapture();
+        }
+        else{
+            stopCapture();
+        }
+    }
+
+    useEffect(() => {
+        if(voiceChangeSelected){
+            spoken.say("Voice effect turned on!");
+            setCurText("Voice effect turned on!")
+        }
+        else
+            spoken.say("Voice effect has been turned off!");
+
+            
+        
+    },[voiceChangeSelected])
+
+
 
 
     return <div className="col root">
@@ -98,6 +143,7 @@ const Home = props => {
                 />
                 <p className="text">Video Change</p>
             </div>
+            {voiceChangeSelected? <p className="subTitle">{curText}</p> : <></>}
             <div className="btns">
              <button className="options">Show more options</button>
                 <button className="button" onClick={onSubmit}>
