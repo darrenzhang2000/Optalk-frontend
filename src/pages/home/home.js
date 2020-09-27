@@ -9,7 +9,7 @@ const IOSSwitch = withStyles((theme) => ({
     root: {
         width: 100,
         height: 50,
-        padding: 0,
+        padding: 2,
         margin: theme.spacing(1),
     },
     switchBase: {
@@ -77,13 +77,13 @@ const Home = props => {
         <div className="home">
             <p className="activeTitle">Active</p>
 
-            <div className="platforms">
+            <div className="platform">
                 <img src={Skype} className="img" />
                 <img src={MST} className="img" />
                 <img src={GoogleMeet} className="img" />
             </div>
 
-            <div className="voice-change row">
+            <div className="voiceChange">
                 <FormControlLabel
                     control={<IOSSwitch checked={voiceChangeSelected} onChange={() => { setVoiceChangeSelected(!voiceChangeSelected) }} name="checkedB" />}
                 // label="iOS style"
@@ -91,20 +91,20 @@ const Home = props => {
                 <p className="text">Voice Change</p>
             </div>
 
-            <div className="video-change row">
+            <div className="voiceChange">
                 <FormControlLabel
                     control={<IOSSwitch checked={videoChangeSelected} onChange={() => { setVideoChangeSelected(!videoChangeSelected) }} name="checkedB" />}
                 // label="iOS style"
                 />
                 <p className="text">Video Change</p>
             </div>
-
-            <button className="options">Show more options</button>
-            <div >
+            <div className="btns">
+             <button className="options">Show more options</button>
                 <button className="button" onClick={onSubmit}>
                     Apply
-            </button>
+                </button>
             </div>
+            
         </div>
     </div>
 }

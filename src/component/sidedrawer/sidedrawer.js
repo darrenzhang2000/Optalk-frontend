@@ -8,26 +8,27 @@ import "./sidedrawer.css"
 
 const Sidedrawer = props => {
   return (
-    <nav className="side-drawer" style={{justifyItems:'center'}}>
-      <div>
-        <AccountCircle style={{ color: '#FF6B00' }} /><p>Account</p>
+    <div className="sideDrawer" >
+      <div className="tab">
+        <AccountCircle style={{ color: '#FF6B00' , fontSize:56 }} /><p className="txt">Account</p>
       </div>
-      <div>
-        <PeopleAltIcon style={{ color: '#FF6B00' }} /><p>Switch Account</p>
+      <div className="tab">
+        <PeopleAltIcon style={{ color: '#FF6B00', fontSize:56 }} /><p className="txt">Switch Account</p>
       </div>
 
-      <div>
-        <HelpOutlineIcon style={{ color: '#FF6B00' }} /><p>Help</p>
+      <div className="tab">
+        <HelpOutlineIcon style={{ color: '#FF6B00', fontSize:56 }} /><p className="txt">Help</p>
       </div>
-      <div>
-        <ExitToAppIcon style={{ color: '#FF6B00', transform: "scaleX(-1)" }} /><p>Logout</p>
+      <div className="tab">
+        <ExitToAppIcon style={{ color: '#FF6B00', transform: "scaleX(-1)", fontSize:56 }} /><p className="txt">Logout</p>
       </div>
       <br></br>
-      <div class="cancel"><CancelIcon style={{ color: '#FF6B00' }} />
+      <div className="cancel">
+        <CancelIcon style={{ color: '#FF6B00', fontSize:36 }} />
       </div>
 
 
-    </nav>
+    </div>
   )
 }
 

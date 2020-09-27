@@ -11,22 +11,22 @@ const Account = props => {
 
         <div className="row">
             <img src={Back}/>
-            <p>Linked Accounts</p>
+            <p className="txt">Linked Accounts</p>
         </div>
      
-        <Paper elevation={3} className="row1 rounded">
+        <Paper elevation={3} className="row1">
             <img src={Skype} className="img" />
-            <p>Skype</p>
+            <p className="txt">Skype</p>
         </Paper>
 
         <Paper elevation={3} className="row1">
             <img src={MST} className="img" />
-            <p>Microsoft Teams</p>
+            <p className="txt">Microsoft Teams</p>
         </Paper>
 
         <Paper elevation={3} className="row1">
             <img src={GoogleMeet} className="img" />
-            <p>Google Meet</p>
+            <p className="txt">Google Meet</p>
         </Paper>
         
         <button class="button">Add New Accounts</button>
