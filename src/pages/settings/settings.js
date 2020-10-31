@@ -11,20 +11,6 @@ const Settings = props => {
             <div className="wrapper">
                 <p className="ttl">Voice preference</p>
                 
-                <Paper className="row">
-                    <RadioButtonCheckedIcon/>
-                    <p className="txt"> Robot</p>
-                </Paper>
-
-                <Paper className="row">
-                <RadioButtonUncheckedIcon/>
-                    <p className="txt">Mary</p>
-                </Paper>
-
-                <Paper className="row">
-                <RadioButtonUncheckedIcon/>
-                    <p className="txt">Tom</p>
-                </Paper>
 
                 <p className="ttl">Video preference</p>
                 <div className="row">
