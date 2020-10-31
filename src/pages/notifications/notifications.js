@@ -2,7 +2,7 @@ import React from 'react'
 
 const Notifications = props => {
     return <div>
-        What even goes here lol
+        You have no new notifcations
     </div>
 }
 
