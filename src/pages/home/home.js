@@ -124,19 +124,6 @@ const Home = props => {
         <div className="home">
             <p className="activeTitle">Active</p>
 
-            <div className="platform">
-                <img src={Skype} className="img" />
-                <img src={MST} className="img" />
-                <img src={GoogleMeet} className="img" />
-            </div>
-
-            <div className="voiceChange">
-                <FormControlLabel
-                    control={<IOSSwitch checked={voiceChangeSelected} onChange={() => { setVoiceChangeSelected(!voiceChangeSelected) }} name="checkedB" />}
-                // label="iOS style"
-                />
-                <p className="text">Voice Change</p>
-            </div>
 
 
             
