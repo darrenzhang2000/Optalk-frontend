@@ -138,14 +138,6 @@ const Home = props => {
                 <p className="text">Voice Change</p>
             </div>
 
-            <div className="voiceChange">
-                <FormControlLabel
-                    control={<IOSSwitch checked={videoChangeSelected} onChange={() => { setVideoChangeSelected(!videoChangeSelected) }} name="checkedB" />}
-                // label="iOS style"
-                />
-                <p className="text">Video Change</p>
-            </div>
-            {voiceChangeSelected? <p className="subTitle">{curText}</p> : <></>}
 
             
         </div>
