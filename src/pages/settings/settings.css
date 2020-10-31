@@ -2,15 +2,22 @@
     display: flex;
     flex-direction: row;
     width: 200px; 
-    margin-bottom: 15px;
+    margin-bottom: 1px;
     justify-content: center;
     text-align: center;
 }
-.checled{
+.checked{
     background-color: orange;
-
 }
-.heading p{
-    width: 200px;
-    text-align: center;
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ttl{
+    font-size: x-large;
+    font-weight: 700;
 }

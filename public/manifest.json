@@ -4,6 +4,11 @@
   "version": "1.0.0",
   "manifest_version": 2,
   "description": "One stop extension for your next interviews",
+  "icons": [
+    {
+      "512": "optalk.png"
+    }
+  ],
   "browser_action": {
     "default_popup": "index.html"
   }

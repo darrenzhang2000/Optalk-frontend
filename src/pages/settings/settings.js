@@ -7,30 +7,32 @@ import RobotAvatar from './images/robot.png'
 import "./settings.css"
 
 const Settings = props => {
-    return <div class="heading">
-        <p>Voice preference</p>
-        
-        <Paper className="row checked">
-            <RadioButtonCheckedIcon/>
-            <p>Robot</p>
-        </Paper>
+    return (
+            <div className="wrapper">
+                <p className="ttl">Voice preference</p>
+                
+                <Paper className="row">
+                    <RadioButtonCheckedIcon/>
+                    <p className="txt"> Robot</p>
+                </Paper>
 
-        <Paper className="row">
-        <RadioButtonUncheckedIcon/>
-            <p>Mary</p>
-        </Paper>
+                <Paper className="row">
+                <RadioButtonUncheckedIcon/>
+                    <p className="txt">Mary</p>
+                </Paper>
 
-        <Paper className="row">
-        <RadioButtonUncheckedIcon/>
-            <p>Tom</p>
-        </Paper>
+                <Paper className="row">
+                <RadioButtonUncheckedIcon/>
+                    <p className="txt">Tom</p>
+                </Paper>
 
-        <p>Video preference</p>
-        <div className="row">
-            <img src={HumanAvatar}/>
-            <img src={RobotAvatar}/>
-        </div>
-    </div>
+                <p className="ttl">Video preference</p>
+                <div className="row">
+                    <img src={HumanAvatar}/>
+                    <img src={RobotAvatar}/>
+                </div>
+            </div>
+    )
 }
 
 export default Settings

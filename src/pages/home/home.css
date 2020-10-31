@@ -29,8 +29,6 @@
 }
 
 .text{
-    width: 165px;
-    height: 29px;
    
     font-family: Montserrat;
     font-style: normal;
@@ -41,21 +39,14 @@
     color: #000000;
 }
 
-.button {
-    margin-top: 15px;
-    width: 211px;
-    height: 45px;
 
-    background: #FF6B00;
-    border-radius: 25px;
-    margin-left: 54px;
-}
 
 .platform {
     width: 180px;
     display: flex;
     justify-content: space-between;
     outline: none;
+    margin-bottom: 3%;
 }
 
 .options{
@@ -63,5 +54,28 @@
     color:#FF6B00;
     background-color: white;
     outline: none;
+    margin-top:20px;
+    margin-left: 10%;
 
+}
+
+.btns{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top:20px;
+    flex-direction: column;
+}
+
+.button{
+    outline: none;
+    border-width: 0ch;
+    color:white;
+    font-size: large;
+}
+
+.subTitle{
+    font-weight: 600;
+    font-size: large;
+    font-style: italic;
 }
