@@ -138,10 +138,6 @@ const Home = props => {
                 <p className="text">Voice Change</p>
             </div>
 
-<<<<<<< HEAD
-            <button className="options">Show more options</button>
-            <div >
-=======
             <div className="voiceChange">
                 <FormControlLabel
                     control={<IOSSwitch checked={videoChangeSelected} onChange={() => { setVideoChangeSelected(!videoChangeSelected) }} name="checkedB" />}
@@ -152,7 +148,6 @@ const Home = props => {
             {voiceChangeSelected? <p className="subTitle">{curText}</p> : <></>}
             <div className="btns">
              <button className="options">Show more options</button>
->>>>>>> e919469dc5cda4826cd1a21c26a7610c6b6ce8c0
                 <button className="button" onClick={onSubmit}>
                     Apply
                 </button>
