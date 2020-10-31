@@ -146,12 +146,7 @@ const Home = props => {
                 <p className="text">Video Change</p>
             </div>
             {voiceChangeSelected? <p className="subTitle">{curText}</p> : <></>}
-            <div className="btns">
-             <button className="options">Show more options</button>
-                <button className="button" onClick={onSubmit}>
-                    Apply
-                </button>
-            </div>
+
             
         </div>
     </div>
